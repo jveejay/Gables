@@ -642,10 +642,10 @@ Java_com_google_gables_Roofline_GPUExecute(JNIEnv *env, jobject thiz, jobject as
             uint64_t total_bytes = t * working_set_size * bytes_per_elem * mem_accesses_per_elem;
             uint64_t total_flops = t * working_set_size * nFlops * flops_per_elem;
 
-            results << std::right << std::setw(12) << working_set_size * bytes_per_elem
-                    << std::right << std::setw(12) << t
-                    << std::right << std::setw(15) << total_seconds * 1000000
-                    << std::right << std::setw(12) << total_bytes
+            results << std::right << std::setw(12) << working_set_size * bytes_per_elem << " "
+                    << std::right << std::setw(12) << t << " "
+                    << std::right << std::setw(15) << total_seconds * 1000000 << " "
+                    << std::right << std::setw(12) << total_bytes << " "
                     << std::right << std::setw(12) << total_flops
                     << std::endl;
 
